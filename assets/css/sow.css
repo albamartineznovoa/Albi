@@ -215,3 +215,62 @@ footer {
   color: #555;
   background-color: #fafafa;
 }
+
+/* CARRUSEL */
+/* ==== Carrusel CSS limpio, proporcional y elegante ==== */
+.carousel-simple {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 3rem auto;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem;
+}
+
+.carousel-container img {
+  height: 280px;
+  width: auto;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.carousel-container img:hover {
+  transform: scale(1.02);
+}
+
+/* Flechas de navegación */
+.carousel-simple button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #111;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  padding: 0 0.5rem;
+}
+
+.carousel-simple button:hover {
+  opacity: 0.7;
+}
+
+/* Ocultar scrollbars */
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+.carousel-container {
+  scrollbar-width: none;
+}
